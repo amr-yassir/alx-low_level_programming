@@ -4,7 +4,7 @@
  *
  * @c: Check the input
  *
- * Return: 1 +, -1 -, 0 0
+ * Return: 1 if +, -1 if -, 0 if 0
 */
 
 int print_sign(int n)
