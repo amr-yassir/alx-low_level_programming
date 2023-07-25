@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * print_number - prints integer
- *
- * @n: check input
+ * print_number - prints an integer
+ * @n: input integer parameter
 */
 
 void print_number(int n)
@@ -12,12 +11,12 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		putchar('-');
+		putchar(45);
 		i = -i;
 	}
-
-	if ((i / 10) > 0)
+	if (i / 10)
+	{
 		print_number(i / 10);
-
-	putchar((i % 10) + 48);
+	}
+	putchar(i % 10 + '0');
 }
