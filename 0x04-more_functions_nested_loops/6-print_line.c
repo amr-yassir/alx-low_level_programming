@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_line - function to print _
+ * print_line - print a street line
  *
- * @n: check input
+ * @n: check input for n times _ is drawn
  *
  * Return: 0 (success)
 */
@@ -16,7 +16,7 @@ void print_line(int n)
 		putchar('\n');
 	else
 	{
-		for(i = 1; i <= n; i++)
+		for (i = 1; i <= n; i++)
 			putchar('_');
 		putchar('\n');
 	}
