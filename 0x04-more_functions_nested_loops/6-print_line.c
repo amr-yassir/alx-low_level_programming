@@ -2,7 +2,9 @@
 /**
  * print_line - function to print _
  *
- * Return: 0
+ * @n: check input
+ *
+ * Return: 0 (success)
 */
 void print_line(int n)
 {
