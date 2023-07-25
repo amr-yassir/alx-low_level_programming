@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * print_line - function to print _
  *
  * @n: check input
 */
+
 void print_line(int n)
 {
 	int i;
@@ -14,6 +16,6 @@ void print_line(int n)
 	{
 		for(i = 1; i <= n; i++)
 			putchar('_');
-	putchar('\n');
+		putchar('\n');
 	}
 }
