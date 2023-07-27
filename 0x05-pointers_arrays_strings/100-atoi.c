@@ -22,7 +22,7 @@ int _atoi(char *s)
 			num *= 10;
 			num += s[i];
 		}
-		return (num);
 	}
 	_putchar('\n');
+	return (num);
 }
