@@ -11,18 +11,18 @@
 int _atoi(char *s)
 {
 	int i;
-	int num;
+	int num = 0;
+	int sign = 1;
 
 	for (i = 0; s[i]; i++)
 	{
 		if (s[i] == '-')
-		       _putchar('-');
+		       sign *= -1;
 		while (s[i] >= '0' && s[i] <= '9')
 		{
 			num *= 10;
 			num += s[i];
 		}
 	}
-	_putchar('\n');
-	return (num);
+	return (num * sign);
 }
