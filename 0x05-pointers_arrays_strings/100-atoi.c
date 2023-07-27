@@ -2,7 +2,7 @@
 
 /**
  * _atoi - convert
- * 
+ *
  * @s: input
  *
  * Return: num
