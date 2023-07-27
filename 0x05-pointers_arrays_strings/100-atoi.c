@@ -23,6 +23,6 @@ int _atoi(char *s)
 			num += s[i];
 		}
 		return (num);
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
