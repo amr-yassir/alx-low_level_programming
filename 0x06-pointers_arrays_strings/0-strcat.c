@@ -1,6 +1,13 @@
 #include "main.h"
 
-/***/
+/**
+ * *_strcat - function to merge two strings
+ *
+ * @dest: input
+ * @src: input
+ *
+ * Return: dest
+*/
 
 char *_strcat(char *dest, char *src)
 {
