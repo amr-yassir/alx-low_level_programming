@@ -13,7 +13,7 @@ char *cap_string(char *str)
 	int i, j;
 
 	j = 0;
-	i = j + 1
+	i = j + 1;
 	while (str[j] = 32)
 	{
 		str[i] = str[i] - 32;
