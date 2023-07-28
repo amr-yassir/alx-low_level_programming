@@ -14,12 +14,10 @@ char *cap_string(char *str)
 
 	j = 0;
 	str[0] = str[0] - 32;
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[j] = 32)
 	{
-		while (str[j] = 32)
-		{
-			str[j + 1] = str[j + 1] - 32;
-		}
+		str[j + 1] = str[j + 1] - 32;
+		j++;
 	}
 	return (str);
 }
