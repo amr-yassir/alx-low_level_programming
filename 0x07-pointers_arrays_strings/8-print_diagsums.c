@@ -1,6 +1,13 @@
 #include "main.h"
 
-/***/
+/**
+ * print_diagsums - print diagonals sum of a square
+ *
+ * @a: input
+ * @size: input
+ *
+ * Return: nothing
+*/
 
 void print_diagsums(int *a, int size)
 {
