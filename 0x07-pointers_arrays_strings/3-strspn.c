@@ -6,7 +6,7 @@
  * @s: input
  * @accept: input
  *
- * Return: i
+ * Return: unsigned int
 */
 
 unsigned int _strspn(char *s, char *accept)
