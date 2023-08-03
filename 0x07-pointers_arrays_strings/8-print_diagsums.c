@@ -21,5 +21,5 @@ void print_diagsums(int *a, int size)
 			sum += a[j];
 		}
 	}
-	putchar(sum);
+	printf("%d", sum);
 }
