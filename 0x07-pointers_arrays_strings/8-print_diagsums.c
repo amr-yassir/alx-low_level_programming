@@ -15,5 +15,4 @@ void print_diagsums(int *a, int size)
 		}
 	}
 	putchar(sum);
-	return (0);
 }
