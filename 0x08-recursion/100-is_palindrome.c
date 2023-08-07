@@ -13,13 +13,13 @@ int check_pal(char *s, int i, int len);
 int is_palindrome(char *s)
 {
 	if (*s == 0)
-		return (0);
+		return (1);
 	return (check_pal(s, 0, strlength(s)));
 }
 
 /**
  * strlength - determine the length of a string
- * 
+ *
  * @s: input
  *
  * Return: int
