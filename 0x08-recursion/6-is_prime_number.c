@@ -6,7 +6,7 @@
  * @n: input
  * @counter: input
  *
- * REturn: int
+ * Return: int
 */
 
 int prime(int n, int counter);
