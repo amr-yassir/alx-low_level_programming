@@ -3,7 +3,7 @@
 /**
  * _pow_recursion - return x raised to power y
  *
- * @x; input
+ * @x: input
  * @y: input
  *
  * Return: x to power y
