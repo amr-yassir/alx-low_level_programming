@@ -4,6 +4,7 @@
  * _sqrt_recursion - calc the square root of a number
  *
  * @n: input
+ * @val: input
  *
  * Return: square root of n
 */
@@ -31,5 +32,5 @@ int sqr(int n, int val)
 	else if (val * val < n)
 		return (sqr(n, val + 1));
 	else
-		return(-1);
+		return (-1);
 }
