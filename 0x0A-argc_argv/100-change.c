@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int coins = 0;
+	int sum = 0;
 	int n;
 	int coins[] = {25, 10, 5, 2, 1};
 
@@ -25,36 +25,21 @@ int main(int argc, char *argv[])
 
 	n = atoi(argv[1]);
 
-	while (n % 25 == 0)
+	if (n < 0)
 	{
-		n -= 25;
-		coins++;
+		printf("0\n");
+		return (0);
 	}
 
-	while (n % 10 == 0)
+	for (i = 0; i < 5 && n >= 0; i++)
 	{
-		n -= 10;
-		coins++;
+		while (n >= coins[i])
+		{
+			sum++;
+			n -= coins[i];
+		}
 	}
 
-	while (n % 5 == 0)
-	{
-		n -= 5;
-		coins++;
-	}
-
-	while (n % 2 == n)
-	{
-		n -= 2;
-		coins++;
-	}
-
-	while (n / 1 == n)
-	{
-		n -= 1;
-		coins++;
-	}
-
-	printf("%d", coins);
+	printf("%d", sum);
 	return (0);
 }
