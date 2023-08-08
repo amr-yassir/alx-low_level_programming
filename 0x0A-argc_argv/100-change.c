@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 {
 	int coins = 0;
 	int n;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -39,6 +40,12 @@ int main(int argc, char *argv[])
 	while (n % 5 == 0)
 	{
 		n -= 5;
+		coins++;
+	}
+
+	while (n % 2 == n)
+	{
+		n -= 2;
 		coins++;
 	}
 
