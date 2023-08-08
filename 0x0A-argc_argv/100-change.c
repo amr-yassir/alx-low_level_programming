@@ -12,6 +12,7 @@
 
 int main(int argc, char *argv[])
 {
+	int i;
 	int sum = 0;
 	int n;
 	int coins[] = {25, 10, 5, 2, 1};
