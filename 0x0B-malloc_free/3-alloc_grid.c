@@ -11,7 +11,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int *n;
+	int **n;
 	int l;
 	int i;
 
@@ -25,5 +25,5 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < l; i++)
 		n[i] = 0;
 
-	return (**n);
+	return (*n);
 }
