@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 
 /**
  * main - Entry point
@@ -30,7 +29,7 @@ int main(int argc, int *argv[])
 			}
 		}
 	}
-	mult = atoi(argv[1]) * atoi(argv[2]);
+	mult = atol(argv[1]) * atol(argv[2]);
 	printf("%lu\n", mult);
 	return (0);
 }
