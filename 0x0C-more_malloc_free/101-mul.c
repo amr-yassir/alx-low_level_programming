@@ -30,5 +30,6 @@ int main(int argc, int *argv[])
 		}
 	}
 	mult = atoi(argv[1] * argv[2]);
-	return (mult);
+	printf("%d\n", mult);
+	return (0);
 }
