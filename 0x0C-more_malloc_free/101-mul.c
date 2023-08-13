@@ -10,7 +10,7 @@
 int main(int argc, int *argv[])
 {
 	int i, j;
-	unsigned int mult;
+	unsigned long mult;
 
 	if (argc != 3)
 	{
@@ -29,7 +29,7 @@ int main(int argc, int *argv[])
 			}
 		}
 	}
-	mult = atoi(argv[1] * argv[2]);
-	printf("%u\n", mult);
+	mult = atoi(argv[1]) * atoi(argv[2]);
+	printf("%lu\n", mult);
 	return (0);
 }
