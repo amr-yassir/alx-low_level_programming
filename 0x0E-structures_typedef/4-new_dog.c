@@ -13,12 +13,12 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
-	unsigned int l1;
+	unsigned int l1, l2, i;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
-	for (l1 = 0; name[l2]; l1++)
+	for (l1 = 0; name[l1]; l1++)
 		;
 	l1++;
 
