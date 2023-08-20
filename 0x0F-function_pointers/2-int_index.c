@@ -1,7 +1,7 @@
 #include "function_pointers.h"
 
 /**
- * int_indeex - search for integer
+ * int_index - search for integer
  * @array: array of elements
  * @size: size of the array
  * @cmp: compare function
