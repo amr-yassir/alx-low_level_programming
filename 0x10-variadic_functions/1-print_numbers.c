@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - print numbers
- * @seperator: seperator
+ * @separator: seperator
  * @n: number of arguments
  * @...: the numbers
  * Return: void
