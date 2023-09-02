@@ -2,8 +2,8 @@
 
 void before_main(void) __attribute__ ((constructor));
 
-/*
- * before_main - prints a sentence before the main function is executed
+/**
+ * before_main - executes before the main function is executed
  * Return: void
 */
 
