@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - return the nth node of the list
  * @head: pointer to the list
- * @indext: the index of the node
+ * @index: the index of the node
  *
  * Return: pointer to the nth node
 */
