@@ -9,7 +9,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int uint;
+	unsigned int uint = 0;
 
 	if (!b)
 		return (NULL);
@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (*b != '1' && *b != '0')
 			return (NULL);
-		uint = uint * 2 + (*b++ - 48);
+		uint = uint * 2 + (*b++);
 	}
 	return (uint);
 }
