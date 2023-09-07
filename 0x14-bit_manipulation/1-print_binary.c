@@ -2,20 +2,18 @@
 
 /**
  * print_binary - print binary representation of a number
- * @n: decimal number to print as binary
+ * @n: decimal number
 */
 
 void print_binary(unsigned long int n)
 {
-	unsigned int mask = 0x80;	/*1000 0000*/
-	int i;
-
-	for (i = 0; i < (8 * sizeof(n)); i++)
+	if (n)
 	{
-		if (n & mask >> 1)
-			printf("1");
-		else
-			printf("0");
+		if (n >> 1)
+			print_binary (n >> 1);
+		putchar((n & 1) + '0');
 	}
+	else
+		putchar('0');
 }
 
