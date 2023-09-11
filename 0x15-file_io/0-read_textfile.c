@@ -11,17 +11,16 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
     int file;
-    ssize_t r, w;
-    char buffer[1024 * 8];
+    ssize_t r;
+    char buffer[READ_BUF_SIZE * 8];
 
     if (!filename || !letters)
         return (0);
-
     file = open(filename, O_RDONLY);
     if (file == -1)
         return (0);
     r = read(file, &buffer[0], letters);
-    w = write(STDOUT_FILENO, &buffer[0], r);
+    r = write(STDOUT_FILENO, &buffer[0], r);
     close(file);
-    return (w);
+    return (r);
 }
