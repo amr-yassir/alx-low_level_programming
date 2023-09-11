@@ -6,6 +6,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
     FILE *file;
     char text[letters];
+    __ssize_t w;
 
     if (!filename || !letters)
         return (0);
@@ -17,8 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
     {
         while (fgets(text, letters, file))
         {
-            printf("%s", text);
+            w = write(1, &text, 1);
         }
     }
-    return(strlen(text));
+    return(w);
 }
