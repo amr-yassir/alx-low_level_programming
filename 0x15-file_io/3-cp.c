@@ -23,18 +23,12 @@ int main(int argc, char *argv[])
 	}
 	cp_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (cp_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	while ((rd = read(cp_from, buffer, BUF_SIZE)) > 0)
 	{
 		wr = write(cp_to, buffer, rd);
 		if (wr == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(98);
-		}
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(98);
 	}
 	if (rd == -1)
 	{
@@ -42,14 +36,9 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	if (close(cp_from) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cp_from);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cp_from), exit(100);
 	if (close(cp_to) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cp_to);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cp_to), exit(100);
+
 	return (0);
 }
