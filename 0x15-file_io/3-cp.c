@@ -14,10 +14,7 @@ int main(int argc, char *argv[])
 	int cp_from, cp_to, rd, wr;
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	cp_from = open(argv[1], O_RDONLY);
 	if (cp_from == -1)
 	{
