@@ -6,7 +6,7 @@
  * @letters: The number of letters to read.
  *
  * Return: The actual number of letters read and print
- */
+*/
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
