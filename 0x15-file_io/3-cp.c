@@ -28,16 +28,12 @@ int main(int argc, char *argv[])
 		if (wr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(cp_from);
-			close(cp_to);
 			exit(98);
 		}
 	}
 	if (rd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		close(cp_from);
-		close(cp_to);
 		exit(98);
 	}
 	if (close(cp_from) == -1)
