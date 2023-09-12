@@ -20,8 +20,12 @@ int create_file(const char *filename, char *text_content)
 	if (file == -1)
 		return (-1);
 
-	while(*text_content++)
-		w = write(file, text_content, len);
+	while (*text_content)
+	{
+		len++;
+		text_content++;
+	}
+	w = write(file, text_content, len);
 	if (w == -1)
 		return (-1);
 
