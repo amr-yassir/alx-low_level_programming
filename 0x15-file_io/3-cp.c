@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	{
 		wr = write(cp_to, buffer, rd);
 		if (wr == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	if (rd == -1)
 	{
