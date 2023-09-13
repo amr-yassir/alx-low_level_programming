@@ -53,7 +53,7 @@ void print_data(unsigned char e_ident[EI_NIDENT])
 
 void print_version(unsigned char e_ident[EI_NIDENT])
 {
-	printf("  Version:                           %d (current)\n", e_ident[EI_VERSION]);
+	printf("  Version:                           0x%x (current)\n", e_ident[EI_VERSION]);
 }
 
 void print_osabi(unsigned char e_ident[EI_NIDENT])
