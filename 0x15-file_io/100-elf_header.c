@@ -80,10 +80,10 @@ void print_abiversion(unsigned char e_ident[EI_NIDENT])
 	printf("  ABI Version:                       %d\n", e_ident[EI_ABIVERSION]);
 }
 
-void print_type(Elf64_Ehdr ehdr)
+void print_type(Elf64_Ehdr h)
 {
 	printf("  Type:                              ");
-	switch (ehdr.e_type)
+	switch (h.e_type)
 	{
 		case ET_NONE:
 			printf("NONE (Unknown)\n");
@@ -105,9 +105,9 @@ void print_type(Elf64_Ehdr ehdr)
 	}
 }
 
-void print_entry(Elf64_Ehdr ehdr)
+void print_entry(Elf64_Ehdr h)
 {
-	printf("  Entry point address:               0x%lx\n", (unsigned long)ehdr.e_entry);
+	printf("  Entry point address:               0x%lx\n", (unsigned long)h.e_entry);
 }
 
 int main(int argc, char *argv[])
