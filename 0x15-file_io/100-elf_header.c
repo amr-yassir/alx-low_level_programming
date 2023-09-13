@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	print_entry(h);
 
 	if (close(file) == -1)
-		fprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
+		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
 
 	return (EXIT_SUCCESS);
 }
@@ -150,4 +150,4 @@ void print_type(Elf64_Ehdr ehdr)
 void print_entry(Elf64_Ehdr ehdr)
 {
 	printf("  Entry point address:               0x%lx\n", (unsigned long)ehdr.e_entry);
-} 
+}
