@@ -5,7 +5,7 @@
  * @argc: Number of arguments
  * @argv: Array of pointers to the arguments
  *
- * Return: 1 on success
+ * Return: 0 on success
  *
 */
 
@@ -30,5 +30,5 @@ int main(int argc, char **argv)
 	if (close(file) == -1)
 		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
 
-	return (1);
+	return (0);
 }
