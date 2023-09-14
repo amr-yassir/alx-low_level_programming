@@ -1,4 +1,4 @@
-#iinclude "main.h"
+#include "main.h"
 
 /**
  * main - Displays the information contained in the ELF header
