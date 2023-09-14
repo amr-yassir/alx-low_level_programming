@@ -64,19 +64,11 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 void check_elf(unsigned char *e_ident)
 {
-	int index;
-
-	for (index = 0; index < 4; index++)
-	{
-		if (e_ident[index] != 127 &&
-				e_ident[index] != 'E' &&
-				e_ident[index] != 'L' &&
-				e_ident[index] != 'F')
-		{
-			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-			exit(98);
-		}
-	}
+	if (e_ident[0] != 127 &&
+			e_ident[1] != 'E' &&
+			e_ident[2] != 'L' &&
+			e_ident[index] != 'F')
+		dprintf(STDERR_FILENO, "Error: Not an ELF file\n"), exit(98);
 }
 
 /**
