@@ -27,15 +27,6 @@ int main(int argc, char **argv)
 	else
 		dprintf(STDERR_FILENO, "Not ELF file: %s\n", argv[1]), exit(98);
 
-	print_magic(h.e_ident);
-	print_class(h.e_ident);
-	print_data(h.e_ident);
-	print_version(h.e_ident);
-	print_osabi(h.e_ident);
-	print_abiversion(h.e_ident);
-	print_type(h);
-	print_entry(h);
-
 	if (close(file) == -1)
 		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", file), exit(98);
 
