@@ -1,4 +1,5 @@
 #include "main.h"
+#include <elf.h>
 
 /**
  * main - Displays the information contained in the ELF header
