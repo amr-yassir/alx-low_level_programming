@@ -21,7 +21,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	while (current)
 	{
-		if (current->next == NULL)
+		if (current->next->next == NULL)
 			return (add_dnodeint_end(h, n));
 		else if (i == idx - 1)
 		{
