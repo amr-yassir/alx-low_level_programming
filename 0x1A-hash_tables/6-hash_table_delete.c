@@ -2,15 +2,14 @@
 
 /**
  * hash_table_delete - deletes a hash table
- * @ht: hash table
- * Return: 
+ * @ht: hash table 
 */
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *next;
 
-	if (!ht || !ht->array || !ht->size)
+	if (!ht || !ht->array || ht->size == 0)
 		return;
 	for (i = 0; i < ht->size; i++)
 	{
@@ -25,6 +24,6 @@ void hash_table_delete(hash_table_t *ht)
 	}
 	free (ht->array);
 	ht->array = NULL;
-	ht->aize = 0;
+	ht->size = 0;
 	free(ht);
 }
