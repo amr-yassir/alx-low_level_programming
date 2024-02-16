@@ -39,7 +39,7 @@ hash_node_t *make_new_node(const char *key, const char *value)
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash__table_t *new_node, *current;
+	hash_table_t *new_node, *current;
 	unsigned long int indx;
 	char *new_value;
 
@@ -53,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			new_value = strdup(value);
 			if (!new_value)
-				return (NULL);
+				return (0);
 			free(current->value);
 			current->value = new_value;
 			return (1);
