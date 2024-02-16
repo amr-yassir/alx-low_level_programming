@@ -8,7 +8,7 @@
 */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_table_t *current;
+	hash_node_t *current;
 	unsigned long int indx;
 
 	if (!ht || !ht->array || !ht->size || !key || !strlen(key))
