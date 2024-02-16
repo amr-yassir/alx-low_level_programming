@@ -43,7 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int indx;
 	char *new_value;
 
-	if (!ht || !ht->array || !ht->size || !key || !value || !strlen(key))
+	if (!ht || !ht->array || ht->size == 0 || !key || !value || strlen(key) == 0)
 		return (0);
 	indx = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[indx];
